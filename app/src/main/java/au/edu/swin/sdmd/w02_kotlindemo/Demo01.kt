@@ -4,7 +4,7 @@ package au.edu.swin.sdmd.w02_kotlindemo
 // https://www.packtpub.com/au/application-development/mastering-kotlin
 
 fun main() {
-    greetStudent( "Hello", "mate")
+    greetStudent( "Hello", null)
 }
 
 

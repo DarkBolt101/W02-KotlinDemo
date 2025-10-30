@@ -1,6 +1,20 @@
 package au.edu.swin.sdmd.w02_kotlindemo
 
-class Card(var rank:String, var suit:String, var flip:Boolean = true)
+class Card(var rank:String, var suit:String, var flip:Boolean = true) {
+    fun flip() {
+        flip = flip.not()
+    }
+
+    fun printDetails() {
+        if(flip == true) {
+            println("$rank $suit")
+        }
+        else {
+            println("----")
+        }
+    }
+}
+
 fun flip(TheCard:Card) {
     TheCard.flip = TheCard.flip.not()
 }
@@ -21,4 +35,8 @@ fun main() {
     flip(AceofHearts)
     printDetails(AceofHearts)
 
+
+    AceofHearts.printDetails()
+    AceofHearts.flip()
+    AceofHearts.printDetails()
 }
